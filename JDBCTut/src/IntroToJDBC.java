@@ -1,6 +1,6 @@
 import java.sql.*;
 
-public class App {
+public class IntroToJDBC {
   public static void main(String[] args) {
     // driver loading --> not necessary
 
@@ -18,7 +18,9 @@ public class App {
       // execution of the statement
       String query = "create database my_jdbc_db";
       st.execute(query);
-      
+      // close the connection
+      conn.close();
+
     } catch (Exception e) {
       System.out.println(e.toString());
     }
